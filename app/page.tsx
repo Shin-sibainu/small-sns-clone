@@ -3,8 +3,9 @@ import { cookies } from "next/headers";
 import AuthButtonServer from "./components/AuthButtonServer";
 import { redirect } from "next/navigation";
 import NewPost from "./components/NewPost";
-import Likes from "./components/Likes";
 import Post from "./components/Post";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const supabase = createServerComponentClient<Database>({ cookies });

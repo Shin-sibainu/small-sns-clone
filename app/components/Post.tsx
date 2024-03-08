@@ -51,7 +51,7 @@ export default function Post({ posts }: { posts: PostWithAuthor[] }) {
         <div key={post.id} className="border-gray-900 py-4 px-8 flex">
           <div className="h-12 w-12">
             <Image
-              src={post.author.avatar_url}
+              src={post.author.avatar_url as string | StaticImport}
               alt="user icon"
               width={48}
               height={48}
